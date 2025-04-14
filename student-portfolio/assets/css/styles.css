@@ -1,0 +1,371 @@
+:root {
+    --primary-blue: #1a73e8;
+    --dark-blue: #0d47a1;
+    --light-blue: #4285f4;
+    --sky-blue: #e8f0fe;
+    --navy-blue: #0a2e52;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #5f6368;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--light-gray);
+}
+
+nav {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+nav p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: var(--white);
+    padding: 4rem 5%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.header-text {
+    flex: 1;
+    min-width: 60%;
+}
+
+section {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    color: var(--navy-blue);
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-blue);
+    margin: 0.5rem auto 0;
+}
+
+#about {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    margin: 2rem auto;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skills-grid > div {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.skills-grid > div:hover {
+    transform: translateY(-5px);
+}
+
+.skills-grid h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.skills-grid ul {
+    list-style: none;
+}
+
+.skills-grid li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--medium-gray);
+    display: flex;
+    align-items: center;
+}
+
+.skills-grid li::before {
+    content: '▹';
+    color: var(--primary-blue);
+    margin-right: 0.5rem;
+}
+
+#portfolio {
+    background-color: var(--sky-blue);
+}
+
+.project {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+}
+
+.project p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.project ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.project li {
+    margin-bottom: 0.5rem;
+}
+
+.project a {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.project a:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+#contact {
+    background-color: var(--white);
+    text-align: center;
+}
+
+#contact p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+
+label {
+    text-align: left;
+    font-weight: 500;
+    color: var(--navy-blue);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin-left: 1rem;
+    }
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-top: 2rem;
+    }
+}
+
+.profile-pic{
+    width: 450px;
+    border-radius: 30px;
+}
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    header {
+        padding: 4rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        padding: 0 1rem;
+    }
+}
